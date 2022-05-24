@@ -5,8 +5,7 @@
 
 {% for todo in todo_list %}
 <p class="d-flex justiyf-content-center" style="text-justify:left;min-width:50%;max-width:50%;border:3px solid orangered;">
-    <a href="{% %}">{{todo.title}}-{{todo.created}}</a>
-    
+    <a href="{% url 'detail' todo.id %}">{{todo.title}}-{{todo.created}}</a>
   </p>
 
   <a style="margin-left:15px;text-decoration:none; color:black;font-size:1rem;" href="{% url 'delete' todo.id %}"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="40" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
